@@ -1,17 +1,26 @@
 import React from 'react';
 
-class ImageGallery extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return {
-      <div className='container fullpage'>
-        <img src={image} />
-      </div>
+const ImageGallery = (props) => (
+    <div className=''>
+      <img className='' src={props.image} />
+      <style jsx>{`
+    img {
+      overflow: hidden;
+      display: block;
+      margin: auto;
+      max-width: 1800px;
+      min-height: 40vh;
+      max-height: 80vh;
+      width: 100%;
     }
-  }
-}
+
+    .padding {
+      padding: 5vw;
+      box-sizing: border-box;
+    }
+
+  `}</style>
+    </div>
+)
 
 export default ImageGallery

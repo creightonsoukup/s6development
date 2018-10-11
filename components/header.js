@@ -8,12 +8,18 @@ const Header = (props) => (
         <div className="five columns logo">
           <img src='/static/s6-logo.png'/>
         </div>
-        <ul className="seven columns">
+        <ul className="five columns">
+          <li>
+            <Link href='/projects'>
+              <a>{'PROJECTS'}</a>
+            </Link>
+          </li>
           <li>
             <Link href='/contact'>
               <a>{'CONTACT'}</a>
             </Link>
           </li>
+
         </ul>
       </div>
     </nav>
@@ -25,25 +31,31 @@ const Header = (props) => (
       }
       li {
         list-style: none;
+        margin: 0;
+        padding: 10px;
       }
       ul {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        padding: 10px;
+        align-items: center;
+        margin: 0;
+        float: right;
       }
       img {
-        width: 50%;
+        width: 75%;
         padding: 12px;
         height: 100%;
       }
-      nav {
-        min-height: 90px;
-      }
+
       .logo {
         display: flex;
         justify-content: center;
       }
+      header {
+        background-color: white;
+      }
+
 
     `}
     </style>
